@@ -69,7 +69,7 @@ void get_random() {
   caudal = float(random(1, 10000)) / 100;
 
   //Genera un aleatorio para seleccionar un estado del nivel
-  nivel = niveles[random(1, 4)];
+  nivel = niveles[random(0, 3)];
 }
 
 // devuelve un documento XML con valores en las variables establecidas
