@@ -1,0 +1,4 @@
+C:/Users/Pachi/Desktop/ProgramacionOrientadaAObjetos/curso_learncpp/cmake-build-debug/CMakeFiles/prueba1.dir
+C:/Users/Pachi/Desktop/ProgramacionOrientadaAObjetos/curso_learncpp/cmake-build-debug/CMakeFiles/polimorph.dir
+C:/Users/Pachi/Desktop/ProgramacionOrientadaAObjetos/curso_learncpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Pachi/Desktop/ProgramacionOrientadaAObjetos/curso_learncpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir

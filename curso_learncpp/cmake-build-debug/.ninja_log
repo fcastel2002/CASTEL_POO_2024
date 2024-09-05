@@ -1,0 +1,17 @@
+# ninja log v6
+11	478	7471559685118481	CMakeFiles/prueba1.dir/test.cpp.obj	e664179fe6a613dd
+479	594	7471559689795595	prueba1.exe	e8d548ab9993117a
+2	492	7471577800130882	CMakeFiles/polimorph.dir/clases_polimorfismo.cpp.obj	d483f4e5772b970
+493	662	7471577805028274	polimorph.exe	88e961366b55ca24
+8	652	7471577986791931	CMakeFiles/polimorph.dir/clases_polimorfismo.cpp.obj	d483f4e5772b970
+653	775	7471577993235005	polimorph.exe	88e961366b55ca24
+11	534	7471578382177314	CMakeFiles/polimorph.dir/clases_polimorfismo.cpp.obj	d483f4e5772b970
+535	662	7471578387423266	polimorph.exe	88e961366b55ca24
+7	527	7471590905403419	CMakeFiles/polimorph.dir/clases_polimorfismo.cpp.obj	d483f4e5772b970
+528	661	7471590910619488	polimorph.exe	88e961366b55ca24
+20	520	7471592243365777	CMakeFiles/polimorph.dir/clases_polimorfismo.cpp.obj	d483f4e5772b970
+521	638	7471592248371983	polimorph.exe	88e961366b55ca24
+23	511	7471592730991913	CMakeFiles/polimorph.dir/clases_polimorfismo.cpp.obj	d483f4e5772b970
+511	626	7471592735868872	polimorph.exe	88e961366b55ca24
+6	492	7471593119587137	CMakeFiles/polimorph.dir/clases_polimorfismo.cpp.obj	d483f4e5772b970
+493	618	7471593124454131	polimorph.exe	88e961366b55ca24
