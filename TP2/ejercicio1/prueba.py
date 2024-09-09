@@ -1,8 +1,7 @@
 import serial
 
 # Configura la conexión serie (ajusta el puerto según tu sistema)
-ser = serial.Serial('COM5', 19200   , timeout=1)
-
+ser = serial.Serial('COM5', 19200, timeout=1)
 while True:
     command = ser.write(input().encode())
     while True :

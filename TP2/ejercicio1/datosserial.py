@@ -1,5 +1,5 @@
 import serial
-from IDataSource import IDataSource
+from idatasource import IDataSource
 
 class ConeccionSerial(IDataSource):
 
