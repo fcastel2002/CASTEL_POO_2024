@@ -20,7 +20,7 @@ class ConeccionSerial(IDataSource):
         else:
             raise ConnectionError("Imposible leer, no hay conexión con ningún puerto serial\n")
 
-    def writeData(self,data): #se utilizará para enviar los comandos 'x' 'j' 'c' al Arduino
+    def writeData(self,data): #se utilizaráw para enviar los comandos 'x' 'j' 'c' al Arduino
         if self.conexion:
             self.conexion.write(data.encode('utf-8'))
         else:
