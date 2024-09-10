@@ -1,10 +1,57 @@
-from datosserial import ConeccionSerial
-from dataparser import DataParser
+
+import csv
+import json
+import xml.etree.ElementTree as ET
+from io import StringIO
 
 
 class CSVParser:
     def parse(self, data):
-        return data.split(',')
+        # Verificar si los datos están vacíos
+        if not data.strip():
+            print("Error: Los datos CSV están vacíos o no contienen un formato válido.")
+            return []
 
-    def toString(self, data):
-        return ','.join(data)
+        reader = csv.reader(StringIO(data), delimiter=',')
+
+        try:
+            header = next(reader)  # Leer la primera línea como encabezado
+            for row in reader:
+                if not any(row):  # Si es una fila vacía, la saltamos
+                    continue
+                print(f"hi from parsearll: {row}")
+            return header
+        except StopIteration:
+            # Esto ocurre si el CSV está vacío o mal formado
+            print("Error: No se encontraron datos válidos en el CSV.")
+            return []
+class XMLMessageParser:
+    def parse(self, data):
+        # Verificar si los datos están vacíos
+        if not data.strip():
+            print("Error: Los datos XML están vacíos o no contienen un formato válido.")
+            return []
+
+        try:
+            root = ET.fromstring(data)
+            values = [elem.text.strip() for elem in root.iter() if elem.text is not None]
+            if values and values[0] == '':
+                values = values[1:]
+            return values
+        except ET.ParseError as e:
+            print(f"Error parsing XML: {e}")
+            return []
+class JSONMessageParser:
+    def parse(self, data):
+        # Verificar si los datos están vacíos
+        if not data.strip():
+            print("Error: Los datos JSON están vacíos o no contienen un formato válido.")
+            return []
+
+        try:
+            json_data = json.loads(data)
+            values = [str(value).strip() for value in json_data.values() if value is not None]
+            return values
+        except json.JSONDecodeError as e:
+            print(f"Error parsing JSON: {e}")
+            return []

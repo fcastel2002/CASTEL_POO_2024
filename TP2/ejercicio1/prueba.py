@@ -1,12 +1,15 @@
 import serial
-
-# Configura la conexión serie (ajusta el puerto según tu sistema)
-ser = serial.Serial('COM5', 19200, timeout=1)
+from datosserial import ConeccionSerial
+from parserall import CSVParser
+arduino = ConeccionSerial("COM5", 19200)
+arduino.connect()
+print(arduino.readData())
 while True:
-    command = ser.write(input().encode())
-    while True :
-        line = ser.readline().decode('utf-8').strip()  # Lee una línea y decodifica a texto
-        print(line)
-        if not line:
-            break
+    command = input("Enter command: ")
+    if command == 'exit':
+        break
+    arduino.writeData(command)
+    ndata = ''
+    print(arduino.readData())
+
 
