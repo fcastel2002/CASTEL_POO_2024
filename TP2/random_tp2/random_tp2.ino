@@ -104,7 +104,7 @@ String json_response()
   resp += "  \"estado_nivel\": ";
   resp += "\"" + String (nivel) + "\",\n";
   resp += "  \"caudal\": ";
-  resp += String (caudal) + ",\n";
+  resp += String (caudal) + "\n";
   resp += "}\n";
   return resp;
 }
