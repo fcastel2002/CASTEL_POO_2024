@@ -4,6 +4,7 @@ from datosserial import ConeccionSerial
 
 class Usuario:
     def __init__(self):
+        #Conexion serial
         self.m_conexion = ConeccionSerial("COM5", 19200)
         self.m_conexion.connect()
 
@@ -35,10 +36,9 @@ class Usuario:
     def command_menu(self):
         while True:
             print("1. Crear archivo nuevo")
-            print("2. Escribir en archivo existente")
+            print("2. Escribir en archivo existente (enviar comandos)")
             print("3. Eliminar archivo")
-            print("4. Enviar comandos")
-            print("5. Salir")
+            print("4. Salir")
 
             opcion = input("Ingrese una opción: ")
             if opcion == '1':
@@ -47,14 +47,6 @@ class Usuario:
                 archivo.close()
             elif opcion == '2':
                 print("Ingrese el nombre del archivo a escribir (sin extensión): ")
-                archivo = ManejadorArchivo(input()+".csv")
-                archivo.close()
-            elif opcion == '3':
-                print("Ingrese el nombre del archivo a eliminar (sin extensión): ")
-                archivo = ManejadorArchivo(input()+".csv")
-                archivo.delete_file()
-            elif opcion == '4':
-                print("Ingrese el nombre del archivo donde desea guardar los datos: ")
                 archivo = ManejadorArchivo(input()+".csv")
                 while True:
                     command = self.recibir_comando()
@@ -69,4 +61,13 @@ class Usuario:
                         archivo.mywrite(csvdata)
                     else:
                         print("Error: El formato de los datos CSV no es válido.")
+
+                archivo.close()
+            elif opcion == '3':
+                print("Ingrese el nombre del archivo a eliminar (sin extensión): ")
+                archivo = ManejadorArchivo(input()+".csv")
+                archivo.delete_file()
+            elif opcion == '4':
+                print("Ingrese el nombre del archivo donde desea guardar los datos: ")
+                archivo = ManejadorArchivo(input()+".csv")
 

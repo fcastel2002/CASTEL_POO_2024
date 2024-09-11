@@ -2,10 +2,9 @@
 import csv
 import json
 import xml.etree.ElementTree as ET
+from idataparser import IDataParser
 from io import StringIO
-from archivoshandler import ManejadorArchivo
-
-class CSVParser:
+class CSVParser(IDataParser):
     def parse(self, data):
         # Verificar si los datos están vacíos
         if not data.strip():
@@ -35,7 +34,7 @@ class CSVParser:
         return csv_data+"\n"
 
 
-class XMLMessageParser:
+class XMLMessageParser(IDataParser):
     def parse(self, data):
         # Verificar si los datos están vacíos
         if not data.strip():
@@ -51,7 +50,7 @@ class XMLMessageParser:
         except ET.ParseError as e:
             print(f"Error parsing XML: {e}")
             return []
-class JSONMessageParser:
+class JSONMessageParser(IDataParser):
     def parse(self, data):
         # Verificar si los datos están vacíos
         if not data.strip():
