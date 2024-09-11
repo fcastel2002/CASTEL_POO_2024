@@ -1,4 +1,4 @@
-from archivoshandler import ManejadorArchivo
+from archivoshandler import *
 from parserall import CSVParser, XMLMessageParser, JSONMessageParser
 from datosserial import ConeccionSerial
 
@@ -34,6 +34,7 @@ class Usuario:
         self.m_conexion.writeData(data)
 
     def command_menu(self):
+        opciones = ['1', '2', '3', '4']
         while True:
             print("1. Crear archivo nuevo")
             print("2. Escribir en archivo existente (enviar comandos)")
@@ -41,15 +42,31 @@ class Usuario:
             print("4. Salir")
 
             opcion = input("Ingrese una opción: ")
+            if opcion not in opciones:
+                print("Opción inválida.")
+                continue
             if opcion == '1':
                 print("Ingrese el nombre del archivo a crear (sin extensión): ")
                 archivo = ManejadorArchivo(input()+".csv")
                 archivo.close()
             elif opcion == '2':
                 print("Ingrese el nombre del archivo a escribir (sin extensión): ")
-                archivo = ManejadorArchivo(input()+".csv")
+                lista_archivos = listar_archivos_csv()
+                print("Elija un archivo a escribir:")
+                for index,archivo in enumerate(lista_archivos):
+                    print(f"{index} - " + archivo)
+                cual = input()
+                archivo = lista_archivos(cual)
+                if not archivo:
+                    print("Error: No se ha creado ningún archivo.")
+                    continue
+
+                comandos = ['c', 'j', 'x']
                 while True:
                     command = self.recibir_comando()
+                    if command not in comandos:
+                        print("Comando inválido.")
+                        continue
                     if command == 'exit':
                         break
                     self.enviar_comando(command)

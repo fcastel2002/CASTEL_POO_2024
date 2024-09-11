@@ -21,6 +21,7 @@ class ManejadorArchivo(ManejadorArchivos):
             self.m_currentfile.close()
 
 
+
     def close(self):
         self.m_currentfile.close()
 
@@ -30,3 +31,6 @@ class ManejadorArchivo(ManejadorArchivos):
             print(f"Archivo {self.m_nombreArchivo} eliminado.")
         else:
             print(f"El archivo {self.m_nombreArchivo} no existe.")
+def listar_archivos_csv():
+    archivos_csv = [f for f in os.listdir('.') if f.endswith('.csv')]
+    return archivos_csv

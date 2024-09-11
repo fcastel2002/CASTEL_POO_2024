@@ -1,8 +1,3 @@
-
-
-
-import os
-
 class ManejadorArchivos():
     def read(self,data):
         raise NotImplementedError("Método read() debe ser implementado por la subclase")
