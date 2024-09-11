@@ -6,7 +6,7 @@ from datosserial import ConeccionSerial
 if __name__ == '__main__':
     serialConnect = ConeccionSerial("COM5", 19200)
     serialConnect.connect()
-
+    archivo = ManejadorArchivo("datos.csv")
     try:
         while True:
             command = input("Ingrese el comando (x, j, c): ")
@@ -36,8 +36,15 @@ if __name__ == '__main__':
 
             if data not in ([], None):
                 print(f"Datos recibidos: {data} & {type(data)}")  # Mostrar los datos CSV si son válidos
+                csvdata = CSVParser().deparser(data)
+                # Escribir los datos en un archivo CSV
+                archivo.mywrite(csvdata)
+                archivo.close()
+
+
             else:
                 print("Error: El formato de los datos CSV no es válido.")
 
     except KeyboardInterrupt:
+        archivo.delete_file()
         serialConnect.disconnect()

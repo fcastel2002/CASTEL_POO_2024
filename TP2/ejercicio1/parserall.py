@@ -3,7 +3,7 @@ import csv
 import json
 import xml.etree.ElementTree as ET
 from io import StringIO
-
+from archivoshandler import ManejadorArchivo
 
 class CSVParser:
     def parse(self, data):
@@ -25,6 +25,14 @@ class CSVParser:
             # Esto ocurre si el CSV está vacío o mal formado
             print("Error: No se encontraron datos válidos en el CSV.")
             return []
+    def deparser(self,listed_data):
+        csv_data = ""
+        for i in listed_data:
+            if i+
+            csv_data += i + ";"
+        return csv_data+"\n"
+
+
 class XMLMessageParser:
     def parse(self, data):
         # Verificar si los datos están vacíos
