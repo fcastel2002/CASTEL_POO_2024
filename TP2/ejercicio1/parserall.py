@@ -27,9 +27,11 @@ class CSVParser:
             return []
     def deparser(self,listed_data):
         csv_data = ""
-        for i in listed_data:
-            if i+
-            csv_data += i + ";"
+        for index,valor in  enumerate(listed_data):
+            if index+1 == len(listed_data):
+                csv_data += valor
+                continue
+            csv_data += valor + ";"
         return csv_data+"\n"
 
 
