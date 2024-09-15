@@ -90,6 +90,9 @@ class Usuario:
                 print("Elija un archivo a escribir:")
                 for index, archivo in enumerate(lista_archivos):
                     print(f"{index} - " + archivo)
+                if not lista_archivos:
+                    print("Error: No se ha creado ningún archivo.")
+                    continue
                 cual= int(input())
                 filename = lista_archivos[cual]
                 archivo = ManejadorArchivo(filename)

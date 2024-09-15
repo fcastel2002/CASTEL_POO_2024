@@ -1,0 +1,9 @@
+# ninja log v6
+4	478	7477928202800434	CMakeFiles/EJ2_castel.dir/main.cpp.obj	d05cd91208cc1741
+4	487	7477924922579972	CMakeFiles/EJ2_castel.dir/csvParser.cpp.obj	f3bc3fbd3f49f3d1
+7	392	7477924922619969	CMakeFiles/EJ2_castel.dir/xmlWriter.cpp.obj	a1035b9aed125014
+8	470	7477928202830428	CMakeFiles/EJ2_castel.dir/controlador.cpp.obj	31cb3def1939e44f
+478	590	7477928207548815	EJ2_castel.exe	44b95dba3056266f
+14	468	7477937240973913	CMakeFiles/EJ2_castel.dir/xmlWriter.cpp.obj	a1035b9aed125014
+10	581	7477937240924049	CMakeFiles/EJ2_castel.dir/csvParser.cpp.obj	f3bc3fbd3f49f3d1
+581	710	7477937246642001	EJ2_castel.exe	44b95dba3056266f

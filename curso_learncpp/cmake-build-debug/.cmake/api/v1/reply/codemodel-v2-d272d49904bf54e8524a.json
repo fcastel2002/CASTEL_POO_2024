@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "learningcpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "polimorph::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-polimorph-Debug-5e3546b32219c791e234.json",
+					"name" : "polimorph",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "prueba1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-prueba1-Debug-6b1cd205afbeebda41a3.json",
+					"name" : "prueba1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "question2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-question2-Debug-76d4b87858edb3fef0b7.json",
+					"name" : "question2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/curso_learncpp/cmake-build-debug",
+		"source" : "C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/curso_learncpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
