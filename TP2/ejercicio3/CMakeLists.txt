@@ -8,4 +8,10 @@ add_executable(ej3 sensor.cpp sensor.h
         sensorA.cpp
         sensorA.h
         sensorB.cpp
-        sensorB.h)
+        sensorB.h
+        sensorC.cpp
+        sensorC.h
+        controladorSensores.cpp
+        controladorSensores.h
+        main.cpp)
+add_executable(genera_cfg cfgFile.cpp)

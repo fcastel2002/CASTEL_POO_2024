@@ -77,6 +77,27 @@ build CMakeFiles/ej3.dir/sensorB.cpp.obj: CXX_COMPILER__ej3_unscanned_Debug C$:/
   OBJECT_DIR = CMakeFiles\ej3.dir
   OBJECT_FILE_DIR = CMakeFiles\ej3.dir
 
+build CMakeFiles/ej3.dir/sensorC.cpp.obj: CXX_COMPILER__ej3_unscanned_Debug C$:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/sensorC.cpp || cmake_object_order_depends_target_ej3
+  DEP_FILE = CMakeFiles\ej3.dir\sensorC.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/ejercicio3
+  OBJECT_DIR = CMakeFiles\ej3.dir
+  OBJECT_FILE_DIR = CMakeFiles\ej3.dir
+
+build CMakeFiles/ej3.dir/controladorSensores.cpp.obj: CXX_COMPILER__ej3_unscanned_Debug C$:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/controladorSensores.cpp || cmake_object_order_depends_target_ej3
+  DEP_FILE = CMakeFiles\ej3.dir\controladorSensores.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/ejercicio3
+  OBJECT_DIR = CMakeFiles\ej3.dir
+  OBJECT_FILE_DIR = CMakeFiles\ej3.dir
+
+build CMakeFiles/ej3.dir/main.cpp.obj: CXX_COMPILER__ej3_unscanned_Debug C$:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/main.cpp || cmake_object_order_depends_target_ej3
+  DEP_FILE = CMakeFiles\ej3.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/ejercicio3
+  OBJECT_DIR = CMakeFiles\ej3.dir
+  OBJECT_FILE_DIR = CMakeFiles\ej3.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ej3
@@ -85,7 +106,7 @@ build CMakeFiles/ej3.dir/sensorB.cpp.obj: CXX_COMPILER__ej3_unscanned_Debug C$:/
 #############################################
 # Link the executable ej3.exe
 
-build ej3.exe: CXX_EXECUTABLE_LINKER__ej3_Debug CMakeFiles/ej3.dir/sensor.cpp.obj CMakeFiles/ej3.dir/medicion.cpp.obj CMakeFiles/ej3.dir/sensorA.cpp.obj CMakeFiles/ej3.dir/sensorB.cpp.obj
+build ej3.exe: CXX_EXECUTABLE_LINKER__ej3_Debug CMakeFiles/ej3.dir/sensor.cpp.obj CMakeFiles/ej3.dir/medicion.cpp.obj CMakeFiles/ej3.dir/sensorA.cpp.obj CMakeFiles/ej3.dir/sensorB.cpp.obj CMakeFiles/ej3.dir/sensorC.cpp.obj CMakeFiles/ej3.dir/controladorSensores.cpp.obj CMakeFiles/ej3.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ej3.dir
@@ -94,6 +115,40 @@ build ej3.exe: CXX_EXECUTABLE_LINKER__ej3_Debug CMakeFiles/ej3.dir/sensor.cpp.ob
   TARGET_FILE = ej3.exe
   TARGET_IMPLIB = libej3.dll.a
   TARGET_PDB = ej3.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target genera_cfg
+
+
+#############################################
+# Order-only phony target for genera_cfg
+
+build cmake_object_order_depends_target_genera_cfg: phony || .
+
+build CMakeFiles/genera_cfg.dir/cfgFile.cpp.obj: CXX_COMPILER__genera_cfg_unscanned_Debug C$:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/cfgFile.cpp || cmake_object_order_depends_target_genera_cfg
+  DEP_FILE = CMakeFiles\genera_cfg.dir\cfgFile.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/ejercicio3
+  OBJECT_DIR = CMakeFiles\genera_cfg.dir
+  OBJECT_FILE_DIR = CMakeFiles\genera_cfg.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target genera_cfg
+
+
+#############################################
+# Link the executable genera_cfg.exe
+
+build genera_cfg.exe: CXX_EXECUTABLE_LINKER__genera_cfg_Debug CMakeFiles/genera_cfg.dir/cfgFile.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\genera_cfg.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = genera_cfg.exe
+  TARGET_IMPLIB = libgenera_cfg.dll.a
+  TARGET_PDB = genera_cfg.exe.dbg
 
 
 #############################################
@@ -123,6 +178,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build ej3: phony ej3.exe
 
+build genera_cfg: phony genera_cfg.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -131,7 +188,7 @@ build ej3: phony ej3.exe
 #############################################
 # Folder: C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/cmake-build-debug
 
-build all: phony ej3.exe
+build all: phony ej3.exe genera_cfg.exe
 
 # =============================================================================
 # Built-in targets

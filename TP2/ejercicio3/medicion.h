@@ -11,17 +11,19 @@
 
 class Medicion {
 public:
-    Medicion(std::string type, int sensorId);
+    Medicion(std::string type, int sensorId, std::string ipAddress);
     void addData(const std::string &key, double data);
-    double getData(const std::string &key) const;
-    std::chrono::system_clock::time_point getTime() const;
-    std::string_view getType() const;
-    int getSensorId() const;
+    [[nodiscard]] double getData(const std::string &key) const;
+    [[nodiscard]] std::chrono::system_clock::time_point getTime() const;
+    [[nodiscard]] std::string_view getType() const;
+    [[nodiscard]] std::string_view getIpAddress() const;
+    [[nodiscard]] int getSensorId() const;
 private:
     std::map<std::string, double> m_data;  //asociamos string (key) a valores de tipo double
     std::chrono::system_clock::time_point m_time; //tiempo en que se realizo la medicion
-    std::string m_type; //tipo de medicion
-    int m_sensorId;
+    std::string m_type{}; //tipo de medicion
+    int m_sensorId{};
+    std::string m_ipAddress{};
 
 };
 #endif //MEDICION_H

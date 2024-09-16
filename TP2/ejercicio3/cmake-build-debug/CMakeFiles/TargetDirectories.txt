@@ -1,3 +1,4 @@
 C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/cmake-build-debug/CMakeFiles/ej3.dir
+C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/cmake-build-debug/CMakeFiles/genera_cfg.dir
 C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

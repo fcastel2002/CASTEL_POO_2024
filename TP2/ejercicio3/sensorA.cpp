@@ -12,7 +12,8 @@ SensorA::SensorA(const int id, const std::string &ipAddress) : Sensor(id, ipAddr
 }
 
 Medicion SensorA::medir() {
-    Medicion m("SensorA", m_id);
+
+    Medicion m("A", m_id, m_ipAddress);
 
     double temperature {15.0 + static_cast <double> (std::rand()) / RAND_MAX * 20.0};
     double humidity {50.0 + static_cast <double> (std::rand()) / RAND_MAX * 50.0};

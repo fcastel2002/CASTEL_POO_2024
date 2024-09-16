@@ -6,9 +6,9 @@
 
 #include <utility>
 
-Medicion::Medicion(std::string type, int sensorId) : m_type{std::move(type)}, m_sensorId{sensorId},m_time{std::chrono::system_clock::now()} {}
+Medicion::Medicion(std::string type, const int sensorId, std::string ipAddress) : m_time{std::chrono::system_clock::now()}, m_type{std::move(type)},m_sensorId{sensorId}, m_ipAddress{std::move(ipAddress)} {}
 
-void Medicion::addData(const std::string &key, double data) {
+void Medicion::addData(const std::string &key, const double data) {
     m_data[key] = data;
 }
 double Medicion::getData(const std::string &key) const {
@@ -25,4 +25,7 @@ std::string_view Medicion::getType() const {
 }
 int Medicion::getSensorId() const {
     return m_sensorId;
+}
+std::string_view Medicion::getIpAddress() const {
+    return m_ipAddress;
 }
