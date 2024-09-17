@@ -12,10 +12,17 @@
 #include <string_view>
 #include <chrono>
 
-std::string ControladorSensores::cargarSensores(const std::string &cfgNombreArchivo) {
+#include "consoleLogger.h"
+
+ControladorSensores::ControladorSensores(std::shared_ptr<Logger> logger) : m_logger{logger}{}
+
+
+bool ControladorSensores::cargarSensores(const std::string &cfgNombreArchivo) {
     std::ifstream configFile{cfgNombreArchivo};
     if(!configFile.is_open()) {
-        return "Error al abrir el archivo de configuración";
+        m_logger->logMessage("Error al abrir el archivo de configuración");
+
+        return false;
     }
 
     char tipoSensor{};
@@ -36,51 +43,29 @@ std::string ControladorSensores::cargarSensores(const std::string &cfgNombreArch
         }
     }
     configFile.close();
-    return "SENSORES CARGADOS";
+    m_logger->logMessage("Sensores cargados");
+    return true;
 }
 
-std::string ControladorSensores::recolectarMedidas() {
+bool ControladorSensores::recolectarMedidas() {
     if (sensores.empty()) {
-        return "ERROR: NO HAY SENSORES CARGADOS";
+        m_logger->logMessage("Error: no hay sensores cargados");
+        return false;
     }
     for(auto *sensor : sensores) {
         Medicion m{sensor->medir()};
         mediciones.push_back(m);
     }
-    return "MEDICIONES RECOLECTADAS";
+    m_logger->logMessage("Mediciones recolectadas");
+    return true;
 }
-std::vector<Medicion> ControladorSensores::obtenerMediciones() const {
-    std::vector <Medicion> ultimasMediciones;
-    const auto now {std::chrono::system_clock::now()};
-    for (const auto& m : mediciones) {
-        auto diff{std::chrono::duration_cast<std::chrono::seconds>(now - m.getTime())};
-        if (diff.count() <= 5) {
-            ultimasMediciones.push_back(m);
-        }
-    }
-    return ultimasMediciones;
-}
+
 
 void ControladorSensores::mostrarMediciones() const {
     //const std::vector<Medicion> ultimasMediciones {obtenerUltimasMediciones()};
-    std::cout << "Tipo\tID\tIP\t\tTemperatura\tHumedad\tPresion\tLumens\tRadiacion UV\tViento\n" << std::endl;
-    for (const auto& m : mediciones) {
-        std::cout << m.getType() << "\t";
-        std::cout << m.getSensorId() << "\t";
 
-        // getData recibe las keys y devuelve el valor asociado a esa key
+    m_logger->logMediciones(mediciones);
 
-        std::cout << m.getIpAddress() << "\t";
-        std::cout << m.getData("temperature") << "\t\t";
-        std::cout << m.getData("humidity") << "\t";
-        std::cout << m.getData("pressure") << "\t";
-        std::cout << m.getData("lumens") << "\t";
-        std::cout << m.getData("radiacionUV") << "\t\t";
-        std::cout << m.getData("anemometer") << std::endl;
-
-
-
-    }
 }
 ControladorSensores::~ControladorSensores() {
     for (auto *sensor : sensores) {

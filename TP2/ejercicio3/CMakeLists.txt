@@ -13,5 +13,7 @@ add_executable(ej3 sensor.cpp sensor.h
         sensorC.h
         controladorSensores.cpp
         controladorSensores.h
-        main.cpp)
+        main.cpp
+        logger.h
+        consoleLogger.h)
 add_executable(genera_cfg cfgFile.cpp)

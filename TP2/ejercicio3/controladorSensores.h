@@ -9,21 +9,24 @@
 #include <string_view>
 #include "sensor.h"
 #include "medicion.h"
+#include "logger.h"
 
 class ControladorSensores {
 
 public:
 
-    std::string cargarSensores (const std::string &cfgNombreArchivo);
-    std::string recolectarMedidas();
+    bool cargarSensores(const std::string &cfgNombreArchivo);
+    bool recolectarMedidas();
     std::vector<Medicion> obtenerMediciones() const;
     void mostrarMediciones() const;
+
+    explicit ControladorSensores(std::shared_ptr<Logger> logger);
 
     ~ControladorSensores();
 
 private:
     std::vector<Sensor*> sensores; //collecion de sensores
     std::vector<Medicion> mediciones; //colección de mediciones
-
+    std::shared_ptr<Logger> m_logger;
 };
 #endif //CONTROLADORSENSORES_H
