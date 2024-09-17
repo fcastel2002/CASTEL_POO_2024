@@ -6,6 +6,16 @@
 #include <fstream>
 #include <stdexcept>
 
+/**
+ * @brief Escribe datos en un archivo XML.
+ *
+ * Esta función toma un nombre de archivo y una estructura de datos, abre el archivo para escritura,
+ * y escribe los datos en formato XML. Si no se puede abrir el archivo, lanza una excepción.
+ *
+ * @param nombreArchivo El nombre del archivo XML a escribir.
+ * @param data Un vector de vectores de cadenas que contiene los datos a escribir en el archivo XML.
+ * @throws std::runtime_error Si no se puede abrir el archivo.
+ */
 void XMLWriter::escribirXML(const std::string &nombreArchivo, const std::vector<std::vector<std::string> > &data) {
     std::ofstream archivo(nombreArchivo);
     if (!archivo.is_open()) {
