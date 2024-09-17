@@ -94,6 +94,9 @@ class Usuario:
                     print("Error: No se ha creado ningún archivo.")
                     continue
                 cual= int(input())
+                if cual >= len(lista_archivos):
+                    print("Error: Índice fuera de rango.")
+                    continue
                 filename = lista_archivos[cual]
                 archivo = ManejadorArchivo(filename)
                 if not filename:
@@ -125,6 +128,9 @@ class Usuario:
                 for index, archivo in enumerate(lista_archivos):
                     print(f"{index} - " + archivo)
                 cual= int(input())
+                if cual >= len(lista_archivos):
+                    print("Error: Índice fuera de rango.")
+                    continue
                 filename = lista_archivos[cual]
                 archivo = ManejadorArchivo(filename)
                 archivo.delete_file()
