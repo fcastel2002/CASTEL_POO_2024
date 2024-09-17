@@ -8,8 +8,18 @@
 #include <iostream>
 #include <vector>
 
+/**
+ * @brief Clase final ConsoleLogger que hereda de Logger.
+ *
+ * Esta clase se encarga de registrar las mediciones y mensajes en la consola.
+ */
 class ConsoleLogger final : public Logger {
 public:
+    /**
+     * @brief Registra las mediciones en la consola.
+     *
+     * @param mediciones Vector de objetos Medicion que contiene los datos a registrar.
+     */
     void logMediciones(const std::vector<Medicion> &mediciones) const override {
         std::cout << "Tipo\tID\tIP\t\tTemperatura\tHumedad\tPresion\tLumens\tRadiacion UV\tViento\n" << std::endl;
         for (const auto& m : mediciones) {
@@ -27,8 +37,15 @@ public:
             std::cout << m.getData("anemometer") << std::endl;
         }
     }
+
+    /**
+     * @brief Registra un mensaje en la consola.
+     *
+     * @param mensaje El mensaje a registrar.
+     */
     void logMessage(const std::string &mensaje) const override {
         std::cout << mensaje << std::endl;
     }
 };
+
 #endif //CONSOLELOGGER_H

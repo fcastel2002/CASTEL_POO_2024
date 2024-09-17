@@ -14,14 +14,23 @@
 
 #include "consoleLogger.h"
 
+/**
+ * @brief Constructor for ControladorSensores.
+ *
+ * @param logger Shared pointer to a Logger instance.
+ */
 ControladorSensores::ControladorSensores(std::shared_ptr<Logger> logger) : m_logger{logger}{}
 
-
+/**
+ * @brief Loads sensors from a configuration file.
+ *
+ * @param cfgNombreArchivo The name of the configuration file.
+ * @return true if the sensors were loaded successfully, false otherwise.
+ */
 bool ControladorSensores::cargarSensores(const std::string &cfgNombreArchivo) {
     std::ifstream configFile{cfgNombreArchivo};
     if(!configFile.is_open()) {
         m_logger->logMessage("Error al abrir el archivo de configuración");
-
         return false;
     }
 
@@ -31,12 +40,11 @@ bool ControladorSensores::cargarSensores(const std::string &cfgNombreArchivo) {
 
     while(configFile >> tipoSensor >> id >> ipAddress) {
         Sensor* sensor = nullptr;
-        if (tipoSensor == 'A') {
-            sensor = new SensorA(id, ipAddress);
-        } else if (tipoSensor == 'B') {
-            sensor = new SensorB(id, ipAddress);
-        } else if (tipoSensor == 'C') {
-            sensor = new SensorC(id, ipAddress);
+        switch (tipoSensor) {
+            case 'A': sensor = new SensorA(id, ipAddress); break;
+            case 'B': sensor = new SensorB(id, ipAddress); break;
+            case 'C': sensor = new SensorC(id, ipAddress); break;
+            default: m_logger->logMessage("Error: tipo de sensor desconocido"); break;
         }
         if(sensor) {
             sensores.push_back(sensor);
@@ -47,6 +55,11 @@ bool ControladorSensores::cargarSensores(const std::string &cfgNombreArchivo) {
     return true;
 }
 
+/**
+ * @brief Collects measurements from all loaded sensors.
+ *
+ * @return true if measurements were collected successfully, false otherwise.
+ */
 bool ControladorSensores::recolectarMedidas() {
     if (sensores.empty()) {
         m_logger->logMessage("Error: no hay sensores cargados");
@@ -60,13 +73,19 @@ bool ControladorSensores::recolectarMedidas() {
     return true;
 }
 
-
+/**
+ * @brief Displays the collected measurements.
+ */
 void ControladorSensores::mostrarMediciones() const {
     //const std::vector<Medicion> ultimasMediciones {obtenerUltimasMediciones()};
-
     m_logger->logMediciones(mediciones);
-
 }
+
+/**
+ * @brief Destructor for ControladorSensores.
+ *
+ * Deletes all dynamically allocated sensors.
+ */
 ControladorSensores::~ControladorSensores() {
     for (auto *sensor : sensores) {
         delete sensor;
