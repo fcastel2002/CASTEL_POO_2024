@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://schema.omg.org/spec/UML/2.1">
+  <xmi:Documentation exporter="umbrello uml modeller 2.38.70-2e99ef2 (experimental) (Applications 24.11.70) http://umbrello.kde.org" exporterVersion="2.0.4"/>
+  <uml:Model xmi:id="m1" name="UML Model">
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="folder" name="folder"/>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="dataType" name="dataType"/>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="constructor" name="constructor"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="Logical_View" name="Logical View" stereotype="folder">
+      <uml:Package xmi:id="Datatypes" name="Datatypes" stereotype="folder">
+        <packagedElement xmi:type="uml:DataType" xmi:id="uOAFvDgP0s461" name="char" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="usATIeMbmqyun" name="int"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uc1A6C3tjBzdi" name="float"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u4fqu1MkE3vDh" name="double" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="ulbUbzKBR9zm7" name="bool"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uLan2YsPomIRV" name="string" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u8Dl9jPCKjhFC" name="unsigned char" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uODbNrDBMntvo" name="signed char" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="ushjNYe4jfvxg" name="unsigned int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uIRjGamIW9mTo" name="signed int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="utzbOEwjswQT2" name="short int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uLxgXm7NEFgPX" name="unsigned short int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uAgmgqWymnQ4B" name="signed short int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u9Hcm1zIvRHHB" name="long int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uiQg4g2McTcxX" name="signed long int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uiWFa0p5UPmFi" name="unsigned long int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uxG8lXVX8hmvC" name="long double" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uIVcebeiJTAWZ" name="wchar_t" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="utGiRqS4LBnay" name="array" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uj8ZtlOGk6zWb" name="tuple" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uPUIAEvLyBtjD" name="list" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uAcbRT4kFc6aH" name="long" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="ucehBKSpH9lJS" name="dict" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uotbBwpQqxcRx" name="object" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="un252JbgLji0D" name="set" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="utRQjtDUj1WsL" name="str" stereotype="dataType"/>
+      </uml:Package>
+      <packagedElement xmi:type="uml:Class" xmi:id="uEsjP0sCrywWW" name="DataLogger">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uczqZnARWHsEt" name="log_message" comment="En este caso, imprime un mensaje en consola" ownerScope="classifier">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uCASiK2xCWHo2" name="message" visibility="private" type="utRQjtDUj1WsL" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uMGjuhRe4WqPb" name="log_input" comment="Solicita datos al usuario y los devuelve" ownerScope="classifier">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uZwexk7ijB7HB" type="utRQjtDUj1WsL" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="u1UEi0PrrsVjr" name="prompt" visibility="private" type="utRQjtDUj1WsL" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uA95U2pLsjKPO" name="log_table" comment="Muestra los datos en formato tabular" ownerScope="classifier">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uDhMXt1N9jeTc" name="headers" visibility="private" type="uvrfzGce6yQHl" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uhKWQm4yIxPWE" name="rows" visibility="private" type="uj4xtVet5VqQG" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uKb875p8koxIY" name="log_avg_speed" comment="Muestra la velocidad promedio" ownerScope="classifier">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="ulRzTREQRdvXf" name="speed" visibility="private" type="u1FbGigC7thot" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="u71V2QHETmt5R" name="log_altitud_max" comment="Muestra las mediciones correspondientes a la altitud mÃ¡xima" ownerScope="classifier">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uAElXOhLDzDgW" name="medicion" visibility="private" type="umadTa4rOtVm3" value=""/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="ul0ZBSU92GpF8" name="Medicion">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="uI4o5NyAa3jPn" name="m_distancia" comment="dasddasddasddasd" type="uotbBwpQqxcRx"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="uKslMoLTFbm03" name="m_altitud" comment="dasddasddasddasd" type="uotbBwpQqxcRx"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="upRLWfGqwMhFv" name="m_velocidad" visibility="private" type="uc1A6C3tjBzdi"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="ui569adwFTwRe" name="new_attribute" visibility="private" type="uqUosDNsogaR0"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="u6jbisTFHVEHJ" name="__init__" comment="dasddasd" stereotype="constructor">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uDMUgolDp6hlW" name="velocidad" visibility="private" type="uc1A6C3tjBzdi" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uOMtG8vvvs728" name="distancia" visibility="private" type="uc1A6C3tjBzdi" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uB5qRlHpB3GjS" name="altitud" visibility="private" type="usATIeMbmqyun" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uzHBSj9dybc2s" name="repr__" visibility="private">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uiebMUidPaAlf" type="utRQjtDUj1WsL" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="uqUosDNsogaR0" name="ControladorMediciones">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="umRKI6QrZIP0B" name="m_mediciones" visibility="private" type="uPUIAEvLyBtjD"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uO7hTOHPBAWzb" name="__init__" stereotype="constructor"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uMFVWftlUBEPY" name="generarMedicion">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uvr2Psuj5i1u3" name="N" visibility="private" type="usATIeMbmqyun" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uFGJsvWTK5CRO" name="obtenerVelocidadPromedio">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uy9ZBYrlCPAn4" type="usATIeMbmqyun" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="upA8hLXw4uCna" name="obtenerAltitudMaxima">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uV73YU5d8Hu6W" type="usATIeMbmqyun" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uG7kM8ZxzLhVe" name="retenerDatos">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uuQSsvVlHYHBE" name="nombreArchivo" visibility="private" type="utRQjtDUj1WsL" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uWw2jHza9Wpzk" name="cargarDatos">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="urv2M2NyXlsqz" type="utRQjtDUj1WsL" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uazlRoKqLCYLa" name="nombreArchivo" visibility="private" type="utRQjtDUj1WsL" value=""/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="uOsoi2nT7U1rw" name="RepositorioMediciones">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uGVbULDirZAG1" name="guardarEnArchivo" comment="si no existe escribe cabecera">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uqESMrDHQPGKm" name="mediciones" visibility="private" type="uofoQzsvoapvL" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uFfSfcyL5U4v9" name="nombreArchivo" visibility="private" type="utRQjtDUj1WsL" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uVsblXNrGIfFq" name="exists" visibility="private" type="uvZ7xzd5AiyY2" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="ujXd6YWJYUUGI" name="cagarDesdeArchivo">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="u5OIqjTSAA7VZ" type="utRQjtDUj1WsL" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uIELGP6aK910p" name="nombreArchivo" visibility="private" type="utRQjtDUj1WsL" value=""/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="ucKPhvs17o5AS" name="main (no class)">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="u3qHIDuDHtYyg" name="controlador" type="uqUosDNsogaR0"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="uDguRbgtoEMVn" name="">
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="uJDeB5P3ZewkZ" name="" type="uEsjP0sCrywWW" aggregation="none" isNavigable="false" changeability="changeable"/>
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="uJIEcKirBfAQi" name="" type="ucKPhvs17o5AS" aggregation="none" isNavigable="true" changeability="changeable"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="uzq72qfwcqqp0" name="">
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="u6hoUnpAg3sZT" name="" type="uqUosDNsogaR0" aggregation="none" isNavigable="false" changeability="changeable"/>
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="u375j8JF5yWnY" name="" type="uOsoi2nT7U1rw" aggregation="none" isNavigable="true" changeability="changeable"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="uQKitLkz3aJLf" name="">
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="umKaHnT54yBJk" name="" type="uEsjP0sCrywWW" aggregation="none" isNavigable="false" changeability="changeable"/>
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="uHVqZB3jGr8kT" name="" type="ucKPhvs17o5AS" aggregation="none" isNavigable="true" changeability="changeable"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="uVJEAHvng6e0d" name="">
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="unRUl7gtdDSgk" name="" type="uEsjP0sCrywWW" aggregation="none" isNavigable="false" changeability="changeable"/>
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="u42Uk0Bb9FarV" name="" type="ucKPhvs17o5AS" aggregation="none" isNavigable="true" changeability="changeable"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="ucjqpcP5hZO9w" name="">
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="uOjLlXh8yVU1a" name="" type="ucKPhvs17o5AS" aggregation="none" isNavigable="false" changeability="changeable"/>
+        <ownedEnd xmi:type="uml:AssociationEnd" xmi:id="u2AAr6s6VGnqB" name="" type="uEsjP0sCrywWW" aggregation="none" isNavigable="true" changeability="changeable"/>
+      </packagedElement>
+      <xmi:Extension extender="umbrello">
+        <diagrams resolution="96">
+          <diagram xmi.id="udxguSFsmR5Ib" name="class diagram" type="1" documentation="" backgroundcolor="#ffffff" fillcolor="#ffffc0" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" griddotcolor="#d3d3d3" linecolor="#990000" linewidth="0" textcolor="#000000" usefillcolor="1" showattribassocs="1" showatts="1" showattsig="1" showops="1" showopsig="1" showpackage="1" showpubliconly="0" showscope="1" showdocumentation="0" showstereotype="2" localid="-1" showgrid="0" snapgrid="0" snapcsgrid="0" snapx="25" snapy="25" zoom="112" canvasheight="800" canvaswidth="1100" isopen="1">
+            <widgets>
+              <classwidget xmi.id="uqUosDNsogaR0" localid="uhhxJ50pr6whJ" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" x="166.93" y="309.864" width="206" height="104" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601" showdocumentation="0"/>
+              <classwidget xmi.id="uEsjP0sCrywWW" localid="ueM5lAjxhY5T7" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="0" x="441.918" y="446.551" width="295.214" height="124.179" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601" showdocumentation="0"/>
+              <classwidget xmi.id="ul0ZBSU92GpF8" localid="uuYtVzjwS5TBf" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" x="-68.4781" y="163.567" width="354" height="91" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601" showdocumentation="0"/>
+              <classwidget xmi.id="ucKPhvs17o5AS" localid="ufZG56KozelKD" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" x="493.433" y="339.522" width="195" height="32" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601" showdocumentation="0"/>
+              <classwidget xmi.id="uOsoi2nT7U1rw" localid="uPtcdrsdScdGz" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" x="306.25" y="183.036" width="446" height="45" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601" showdocumentation="0"/>
+            </widgets>
+            <messages/>
+            <associations>
+              <assocwidget xmi.id="ui569adwFTwRe" localid="u51qMUCk9Krol" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" fillcolor="none" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" seqnum="" type="510" visibilityA="1" visibilityB="1" changeabilityA="900" changeabilityB="900" widgetaid="ul0ZBSU92GpF8" widgetbid="uqUosDNsogaR0" indexa="0" totalcounta="0" indexb="0" totalcountb="0">
+                <linepath layout="Direct">
+                  <startpoint startx="156.586" starty="254.567"/>
+                  <endpoint endx="215" endy="309.864"/>
+                </linepath>
+              </assocwidget>
+              <assocwidget xmi.id="uzq72qfwcqqp0" localid="uUYbtsdpnAUF3" textcolor="none" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" fillcolor="none" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" seqnum="" type="512" widgetaid="uqUosDNsogaR0" widgetbid="uOsoi2nT7U1rw" indexa="0" totalcounta="0" indexb="0" totalcountb="0">
+                <linepath layout="Polyline">
+                  <startpoint startx="336.717" starty="309.864"/>
+                  <endpoint endx="529.837" endy="228.036"/>
+                  <point x="372.321" y="282.143"/>
+                  <point x="531.25" y="282.143"/>
+                </linepath>
+              </assocwidget>
+              <assocwidget xmi.id="uVJEAHvng6e0d" localid="u2PE7HJ9eOTZs" textcolor="none" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" fillcolor="none" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" seqnum="" type="512" widgetaid="uEsjP0sCrywWW" widgetbid="ucKPhvs17o5AS" indexa="0" totalcounta="0" indexb="0" totalcountb="0">
+                <linepath layout="Direct">
+                  <startpoint startx="590.096" starty="446.551"/>
+                  <endpoint endx="590.786" endy="371.522"/>
+                </linepath>
+              </assocwidget>
+              <assocwidget xmi.id="ucjqpcP5hZO9w" localid="uDYp3AzMJBBIu" textcolor="none" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" fillcolor="none" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" seqnum="" type="512" widgetaid="ucKPhvs17o5AS" widgetbid="uEsjP0sCrywWW" indexa="0" totalcounta="0" indexb="0" totalcountb="0">
+                <linepath layout="Direct">
+                  <startpoint startx="590.786" starty="371.522"/>
+                  <endpoint endx="590.096" endy="446.551"/>
+                </linepath>
+              </assocwidget>
+              <assocwidget xmi.id="u3qHIDuDHtYyg" localid="uqnNUb5qswU8T" textcolor="none" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" fillcolor="none" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" seqnum="" type="510" visibilityA="0" visibilityB="0" changeabilityA="900" changeabilityB="900" widgetaid="ucKPhvs17o5AS" widgetbid="uqUosDNsogaR0" indexa="0" totalcounta="0" indexb="0" totalcountb="0">
+                <floatingtext xmi.id="uKWgXyAurfuDv" localid="uPeBzspwJ3Ze1" textcolor="none" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" fillcolor="none" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" autoresize="1" x="413.635" y="366.873" width="71" height="17" isinstance="0" showstereotype="2" text="controlador" pretext="+" posttext="" role="710"/>
+                <linepath layout="Direct">
+                  <startpoint startx="493.433" starty="357.449"/>
+                  <endpoint endx="372.93" endy="359.829"/>
+                </linepath>
+              </assocwidget>
+            </associations>
+          </diagram>
+        </diagrams>
+      </xmi:Extension>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="Use_Case_View" name="Use Case View" stereotype="folder"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="Component_View" name="Component View" stereotype="folder"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="Deployment_View" name="Deployment View" stereotype="folder"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="Entity_Relationship_Model" name="Entity Relationship Model" stereotype="folder"/>
+  </uml:Model>
+  <xmi:Extension extender="umbrello">
+    <docsettings viewid="udxguSFsmR5Ib" documentation="" uniqueid="ubu2xYpDbGsQh"/>
+    <listview>
+      <listitem id="Views" type="800" open="1">
+        <listitem id="Component_View" type="821" open="1"/>
+        <listitem id="Deployment_View" type="827" open="1"/>
+        <listitem id="Entity_Relationship_Model" type="836" open="1"/>
+        <listitem id="Logical_View" type="801" open="1">
+          <listitem id="udxguSFsmR5Ib" type="807" label="class diagram" open="0"/>
+          <listitem id="uqUosDNsogaR0" type="813" open="0">
+            <listitem id="uO7hTOHPBAWzb" type="815" open="0"/>
+            <listitem id="uWw2jHza9Wpzk" type="815" open="0"/>
+            <listitem id="uMFVWftlUBEPY" type="815" open="0"/>
+            <listitem id="umRKI6QrZIP0B" type="814" open="0"/>
+            <listitem id="upA8hLXw4uCna" type="815" open="0"/>
+            <listitem id="uFGJsvWTK5CRO" type="815" open="0"/>
+            <listitem id="uG7kM8ZxzLhVe" type="815" open="0"/>
+          </listitem>
+          <listitem id="uEsjP0sCrywWW" type="813" open="0">
+            <listitem id="u71V2QHETmt5R" type="815" open="0"/>
+            <listitem id="uKb875p8koxIY" type="815" open="0"/>
+            <listitem id="uMGjuhRe4WqPb" type="815" open="0"/>
+            <listitem id="uczqZnARWHsEt" type="815" open="0"/>
+            <listitem id="uA95U2pLsjKPO" type="815" open="0"/>
+          </listitem>
+          <listitem id="Datatypes" type="830" open="0">
+            <listitem id="utGiRqS4LBnay" type="829" open="1"/>
+            <listitem id="ulbUbzKBR9zm7" type="829" open="1"/>
+            <listitem id="ucehBKSpH9lJS" type="829" open="1"/>
+            <listitem id="uc1A6C3tjBzdi" type="829" open="1"/>
+            <listitem id="usATIeMbmqyun" type="829" open="1"/>
+            <listitem id="uPUIAEvLyBtjD" type="829" open="1"/>
+            <listitem id="uAcbRT4kFc6aH" type="829" open="1"/>
+            <listitem id="uotbBwpQqxcRx" type="829" open="1"/>
+            <listitem id="un252JbgLji0D" type="829" open="1"/>
+            <listitem id="uj8ZtlOGk6zWb" type="829" open="1"/>
+          </listitem>
+          <listitem id="ucKPhvs17o5AS" type="813" open="0">
+            <listitem id="u3qHIDuDHtYyg" type="814" open="0"/>
+          </listitem>
+          <listitem id="ul0ZBSU92GpF8" type="813" open="1">
+            <listitem id="u6jbisTFHVEHJ" type="815" open="0"/>
+            <listitem id="uKslMoLTFbm03" type="814" open="0"/>
+            <listitem id="uI4o5NyAa3jPn" type="814" open="0"/>
+            <listitem id="upRLWfGqwMhFv" type="814" open="0"/>
+            <listitem id="ui569adwFTwRe" type="814" open="0"/>
+            <listitem id="uzHBSj9dybc2s" type="815" open="0"/>
+          </listitem>
+          <listitem id="uOsoi2nT7U1rw" type="813" open="0">
+            <listitem id="ujXd6YWJYUUGI" type="815" open="0"/>
+            <listitem id="uGVbULDirZAG1" type="815" open="0"/>
+          </listitem>
+        </listitem>
+        <listitem id="Use_Case_View" type="802" open="1"/>
+      </listitem>
+    </listview>
+    <codegeneration>
+      <codegenerator language="Python">
+        <sourcecode id="uczqZnARWHsEt" value="print(message)&#10;"/>
+        <sourcecode id="uMGjuhRe4WqPb" value="return input(prompt)&#10;"/>
+        <sourcecode id="uA95U2pLsjKPO" value="headers_str=&quot; &quot;.join([f&quot;{header:&lt;15}&quot;for header in headers])&#10;print(headers_str)&#10;print(&quot;-&quot;*len(headers_str))&#10;for row in rows:&#10;  row_str=&quot;&quot;.join([f&quot;{cell:&lt;18.2f}&quot;for cell in row])&#10;  print(row_str)&#10;&#10;"/>
+        <sourcecode id="uKb875p8koxIY" value="print(f&quot;La velocidad promedio es: {speed:.2f} m/s&quot;)&#10;"/>
+        <sourcecode id="u71V2QHETmt5R" value="if medicion:&#10;  print(&quot;\nMedicion con la mayor altitud:&quot;)&#10;  print(f&quot;{'Velocidad (m/s) ':&lt;15}{'Distancia (m)':&lt;15}{'Altitud (m)':&lt;15}&quot;)&#10;  print(&quot;-&quot;*45)&#10;  print(f&quot;{medicion.m_velocidad:&lt;15.2f}{medicion.m_distancia:&lt;17.2f}{medicion.m_altitud:&lt;15}&quot;)&#10;&#10;else:&#10;  print(&quot;No hay mediciones&quot;)"/>
+        <sourcecode id="u6jbisTFHVEHJ" value="self.m_velocidad=velocidad&#10;self.m_distancia=distancia&#10;self.m_altitud=altitud&#10;"/>
+        <sourcecode id="uzHBSj9dybc2s" value="return f&quot;Velocidad: {self.m_velocidad}, Distancia: {self.m_distancia}, Altitud: {self.m_altitud}&quot;&#10;"/>
+        <sourcecode id="uO7hTOHPBAWzb" value="self.mediciones=[]&#10;"/>
+        <sourcecode id="uMFVWftlUBEPY" value="for _ in range(N):&#10;  velocidad=round(random.uniform(0,100),2)&#10;  distancia=round(random.uniform(0,1000),2)&#10;  altitud=round(random.randint(0,10000),2)&#10;  medicion=Medicion(velocidad,distancia,altitud)&#10;  self.mediciones.append(medicion)&#10;&#10;"/>
+        <sourcecode id="uFGJsvWTK5CRO" value="if not self.mediciones:&#10;  return 0&#10;&#10;velocidad_total=sum([medicion.m_velocidad for medicion in self.mediciones])&#10;return velocidad_total/len(self.mediciones)&#10;"/>
+        <sourcecode id="upA8hLXw4uCna" value="if not self.mediciones:&#10;  return 0&#10;&#10;return max(self.mediciones,key=lambda medicion:medicion.m_altitud)&#10;"/>
+        <sourcecode id="uG7kM8ZxzLhVe" value="repo=RepositorioMediciones()&#10;if not os.path.exists(nombreArchivo):&#10;  exists=False&#10;&#10;else:&#10;  exists=True&#10;&#10;repo.guardarEnArchivo(self.mediciones,nombreArchivo,exists)&#10;"/>
+        <sourcecode id="uWw2jHza9Wpzk" value="repo=RepositorioMediciones()&#10;self.mediciones=repo.cagarDesdeArchivo(nombreArchivo)&#10;if self.mediciones==&quot;ERROR&quot;:&#10;  return&quot;ERROR&quot;&#10;&#10;"/>
+        <sourcecode id="uGVbULDirZAG1" value="with open(nombreArchivo,mode='a',newline='')as file:&#10;  writer=csv.writer(file)&#10;  if not exists:&#10;    writer.writerow(['Velocidad','Distancia','Altitud'])&#10;&#10;  for medicion in mediciones:&#10;    writer.writerow([medicion.m_velocidad,medicion.m_distancia,medicion.m_altitud])&#10;&#10;&#10;"/>
+        <sourcecode id="ujXd6YWJYUUGI" value="logger=DataLogger()&#10;mediciones=[]&#10;if not os.path.exists(nombreArchivo):&#10;  logger.log_message(&quot;No existe el archivo&quot;)&#10;  return&quot;ERROR&quot;&#10;&#10;with open(nombreArchivo,mode='r')as file:&#10;  reader=csv.reader(file)&#10;  next(reader)&#10;  for row in reader:&#10;    medicion=Medicion(float(row[0]),float(row[1]),int(row[2]))&#10;    mediciones.append(medicion)&#10;&#10;&#10;return mediciones&#10;"/>
+      </codegenerator>
+    </codegeneration>
+  </xmi:Extension>
+</xmi:XMI>
