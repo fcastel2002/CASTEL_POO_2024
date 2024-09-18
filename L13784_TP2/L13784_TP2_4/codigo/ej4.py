@@ -23,7 +23,7 @@ class Medicion:
         Returns:
             str: Una cadena que describe el objeto Medicion.
         """
-        return f"Velocidad: {self.m_velocidad}, Distancia: {self.m_distancia}, Altitud: {self.m_altitud}"
+        return f"{self.m_velocidad},{self.m_distancia},{self.m_altitud}"
 
 class ControladorMediciones:
     def __init__(self):
@@ -160,12 +160,13 @@ def main():
         logger.log_message("-" * 30)
 
         if opcion == "1":
+            continuar = ""
             if controlador.mediciones != []:
                 logger.log_message("Hay mediciones cargadas, si continua se agregarán a las existentes")
                 while True:
-                    continuar = logger.log_input("Ingrese 's' para continuar,'b' para borrar las existentes o 'n' para cancelar: ")
+                    continuar = logger.log_input("Ingrese 's' para continuar,'b' crear nuevas o 'n' para cancelar: ")
                     if continuar == "n":
-                        continue
+                        break
                     elif continuar == "b":
                         controlador.mediciones = []
                     elif continuar != "s":
@@ -173,6 +174,8 @@ def main():
                         continue
                     break
 
+            if continuar == "n":
+                continue
             N = int(logger.log_input("Ingrese la cantidad de mediciones a generar: "))
             controlador.generarMedicion(N)
             logger.log_message(f"{N} Mediciones generadas")
