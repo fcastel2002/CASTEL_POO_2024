@@ -1,0 +1,4 @@
+C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_3/codigo/cmake-build-debug/CMakeFiles/L13784_TP2_3.dir
+C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_3/codigo/cmake-build-debug/CMakeFiles/genera_cfg.dir
+C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_3/codigo/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_3/codigo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
