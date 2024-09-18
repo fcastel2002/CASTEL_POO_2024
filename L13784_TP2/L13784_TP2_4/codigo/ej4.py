@@ -1,4 +1,5 @@
 import random
+import pickle
 from ej4_logger import DataLogger
 
 class Medicion:
@@ -111,12 +112,8 @@ class RepositorioMediciones:
             exists (bool): Indica si el archivo ya existe.
         """
         nombreArchivo = os.path.join("..", "anexo", nombreArchivo)
-        with open(nombreArchivo, mode='a', newline='') as file:
-            writer = csv.writer(file)
-            if not exists:  # si no existe escribe cabecera
-                writer.writerow(['Velocidad', 'Distancia', 'Altitud'])
-            for medicion in mediciones:
-                writer.writerow([medicion.m_velocidad, medicion.m_distancia, medicion.m_altitud])
+        with open(nombreArchivo, mode='wb') as file:
+            pickle.dump(mediciones, file)
 
     def cagarDesdeArchivo(self, nombreArchivo: str):
         """
@@ -131,16 +128,17 @@ class RepositorioMediciones:
         """
         logger = DataLogger()
         mediciones = []
+        nombreArchivo = os.path.join("..", "anexo", nombreArchivo)
         if not os.path.exists(nombreArchivo):
             logger.log_message("No existe el archivo")
             return "ERROR"
-        with open(nombreArchivo, mode='r') as file:
-            reader = csv.reader(file)
-            next(reader)
-            for row in reader:
-                medicion = Medicion(float(row[0]), float(row[1]), int(row[2]))
-                mediciones.append(medicion)
-        return mediciones
+        with open(nombreArchivo, mode='rb') as file:
+            try:
+                mediciones = pickle.load(file)
+            except (pickle.UnpicklingError, EOFError):
+                logger.log_message("Error al cargar el archivo")
+                return "ERROR"
+            return mediciones
 
 def main():
     """
@@ -154,7 +152,7 @@ def main():
         logger.log_message("1. Generar mediciones")
         logger.log_message("2. Obtener velocidad promedio")
         logger.log_message("3. Obtener altitud máxima")
-        logger.log_message("4. Persistir datos en archivo")
+        logger.log_message("4. Persistir mediciones en archivo")
         logger.log_message("5. Cargar datos desde archivo")
         logger.log_message("6. Mostrar datos en tabla")
         logger.log_message("7. Salir")
