@@ -1,3 +1,3 @@
-C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio2/cmake-build-debug/CMakeFiles/EJ2_castel.dir
-C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_2/codigo/cmake-build-debug/CMakeFiles/L13784_TP2_2.dir
+C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_2/codigo/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_2/codigo/cmake-build-debug/CMakeFiles/rebuild_cache.dir

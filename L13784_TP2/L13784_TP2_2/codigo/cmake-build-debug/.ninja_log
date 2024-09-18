@@ -1,6 +1,12 @@
 # ninja log v6
-4	478	7477928202800434	CMakeFiles/EJ2_castel.dir/main.cpp.obj	d05cd91208cc1741
-10	581	7477937240924049	CMakeFiles/EJ2_castel.dir/csvParser.cpp.obj	f3bc3fbd3f49f3d1
-14	468	7477937240973913	CMakeFiles/EJ2_castel.dir/xmlWriter.cpp.obj	a1035b9aed125014
-8	470	7477928202830428	CMakeFiles/EJ2_castel.dir/controlador.cpp.obj	31cb3def1939e44f
-581	710	7477937246642001	EJ2_castel.exe	44b95dba3056266f
+17	545	7483204711160557	CMakeFiles/L13784_TP2_2.dir/xmlWriter.cpp.obj	ad6b4a0ee9c2fac5
+9	581	7483204711085696	CMakeFiles/L13784_TP2_2.dir/main.cpp.obj	b279ad7013bfea2e
+2	578	7483204711018086	CMakeFiles/L13784_TP2_2.dir/controlador.cpp.obj	444564454c5d5ce1
+13	609	7483204711125559	CMakeFiles/L13784_TP2_2.dir/csvParser.cpp.obj	f63ab39c75499aa1
+609	781	7483204717087610	L13784_TP2_2.exe	243f281d2160dba3
+1	254	7483252799345487	build.ninja	82130e6b04d5b260
+12	599	7483252799654451	CMakeFiles/L13784_TP2_2.dir/xmlWriter.cpp.obj	3e0fa2d79f2bdb2a
+4	638	7483252799574720	CMakeFiles/L13784_TP2_2.dir/controlador.cpp.obj	865271470fc4ae3
+7	643	7483252799604621	CMakeFiles/L13784_TP2_2.dir/main.cpp.obj	5a0a587ff7f5e3cd
+9	666	7483252799634520	CMakeFiles/L13784_TP2_2.dir/csvParser.cpp.obj	db3fe7cc4bca53e2
+666	779	7483252806192862	L13784_TP2_2.exe	243f281d2160dba3

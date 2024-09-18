@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio2
+# Install script for directory: C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_2/codigo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/ejercicio2")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/L13784_TP2_2")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/TP2/ejercicio2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Usuario/Desktop/RepoProgramacion/CASTEL_POO_2024/L13784_TP2/L13784_TP2_2/codigo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
