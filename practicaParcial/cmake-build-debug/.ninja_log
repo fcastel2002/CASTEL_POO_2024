@@ -1,0 +1,12 @@
+# ninja log v6
+19	495	7489331690860828	CMakeFiles/practicaParcial.dir/Registro.cpp.obj	8f028592dc8059c
+9	501	7489331690760822	CMakeFiles/practicaParcial.dir/Dron.cpp.obj	deccba8281f894e5
+15	511	7489331690820826	CMakeFiles/practicaParcial.dir/Reporte.cpp.obj	46b516ace0359899
+7	392	7489331938984444	CMakeFiles/practicaParcial.dir/Reporte.cpp.obj	46b516ace0359899
+4	393	7489331938944428	CMakeFiles/practicaParcial.dir/castel.cpp.obj	c20832439c1503ff
+4	299	7489332323717207	CMakeFiles/practicaParcial.dir/Registro.cpp.obj	8f028592dc8059c
+299	387	7489332326670678	practicaParcial.exe	bcdaf632f8bf1e6
+5	386	7489332681338433	CMakeFiles/practicaParcial.dir/castel.cpp.obj	c20832439c1503ff
+387	468	7489332685154500	practicaParcial.exe	bcdaf632f8bf1e6
+4	394	7489332925943893	CMakeFiles/practicaParcial.dir/Reporte.cpp.obj	46b516ace0359899
+394	480	7489332929838972	practicaParcial.exe	bcdaf632f8bf1e6
