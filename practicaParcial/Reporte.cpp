@@ -8,7 +8,6 @@
 
 void Reporte::listar(const std::vector<Registro> &registro) const {
     std::cout << m_encabezado << std::endl;
-    std::cout << "No.\tAltura\tVelocidad\tTiempo\tDireccion" << std::endl;
     std::cout << "---------------------------------------------" << std::endl;
     int num = 1;
     for (const auto &r : registro) {

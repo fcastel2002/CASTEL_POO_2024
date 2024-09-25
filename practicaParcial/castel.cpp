@@ -4,12 +4,12 @@
 int main(void) {
 
     Dron dron1(59);
-    Reporte reporte1("Reporte numero 1 del dron 59");
-    Registro reg1;
-    Registro reg2;
+    Reporte reporte1("No.\tAltura\tVelocidad\tTiempo\tDireccion");
 
-    dron1.addRegistro(reg1);
-    dron1.addRegistro(reg2);
+
+    for (int i = 0; i < 10; i++) {
+        dron1.addRegistro(Registro());
+    }
     reporte1.listar(dron1.getRegistros());
 
 }
