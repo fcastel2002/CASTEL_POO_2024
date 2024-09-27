@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="tests.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\poo-23-xmlrpc\poo-23-xmlrpc\hola_server.cpp">
+    <ClCompile Include="hola_server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

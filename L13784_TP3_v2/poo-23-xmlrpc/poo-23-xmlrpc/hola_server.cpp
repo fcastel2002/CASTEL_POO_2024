@@ -14,6 +14,7 @@ using namespace std;
 using namespace XmlRpc;
 
 #pragma comment(lib, "Ws2_32.lib")
+
 // S es el servidor
 XmlRpcServer S;
 

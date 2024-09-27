@@ -1,9 +1,24 @@
 #include "User.h"
 
 
-User::User(std::string alias, std::string ipAddress, int numbersGenerated = {0}, int sequencesStarted = {0}) 
+User::User(std::string alias, std::string ipAddress, int numbersGenerated, int sequencesStarted) 
 	: m_alias{alias}, m_ipAddress{ipAddress}, m_numbersGenerated{numbersGenerated}, m_sequencesStarted{sequencesStarted}
 {
+}
+
+
+void User::addNumberToSequence(double number)
+{
+	m_sequence.push_back(number);
+	m_sum += number;
+	m_numbersGenerated++;
+}
+
+void User::clearSequence()
+{
+	m_sequence.clear();
+	m_sum = 0;
+	m_sequencesStarted++;
 }
 
 void User::serialize(std::ofstream& file) const
@@ -55,7 +70,7 @@ User* UserManager::getUser(const std::string& alias)
 	}
 }
 
-void UserManager::saveUsers(const std::string& filename = {"users.bin"})
+void UserManager::saveUsers(const std::string& filename)
 {
 
 	std::ofstream file(filename, std::ios::binary);
@@ -70,7 +85,7 @@ void UserManager::saveUsers(const std::string& filename = {"users.bin"})
 	}
 }
 
-void UserManager::loadUsers(const std::string& filename = { "users.bin" })
+void UserManager::loadUsers(const std::string& filename)
 {
 	std::ifstream file(filename, std::ios::binary);
 	if (file.is_open())
