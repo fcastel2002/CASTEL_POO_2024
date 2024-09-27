@@ -1,0 +1,3 @@
+C:/Users/Pachi/Desktop/repos/CASTEL_POO_2024/CASTEL_13784/cmake-build-debug/CMakeFiles/CASTEL_13784.dir
+C:/Users/Pachi/Desktop/repos/CASTEL_POO_2024/CASTEL_13784/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Pachi/Desktop/repos/CASTEL_POO_2024/CASTEL_13784/cmake-build-debug/CMakeFiles/rebuild_cache.dir

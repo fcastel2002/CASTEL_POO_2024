@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.28.6)
 project(L13784_TP2_3)
 set(CMAKE_CXX_STANDARD 23)
 include_directories(codigo)
