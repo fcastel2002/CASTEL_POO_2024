@@ -1,0 +1,12 @@
+﻿  main_server.cpp
+  NumberGenerator.cpp
+  Server.cpp
+C:\Users\Usuario\Desktop\RepoProgramacion\CASTEL_POO_2024\L13784_TP3_v2\L31783_TP3\Servidor\Server.cpp(66,34): warning C4101: 'e': unreferenced local variable
+  User.cpp
+C:\Users\Usuario\Desktop\RepoProgramacion\CASTEL_POO_2024\L13784_TP3_v2\L31783_TP3\Servidor\User.cpp(79,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  AdminInterface.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1331 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Servidor.vcxproj -> C:\Users\Usuario\Desktop\RepoProgramacion\CASTEL_POO_2024\L13784_TP3_v2\L31783_TP3\x64\Release\Servidor.exe

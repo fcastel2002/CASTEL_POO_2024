@@ -1,7 +1,0 @@
-﻿  NumberGenerator.cpp
-  Server.cpp
-  User.cpp
-C:\Users\Usuario\Desktop\RepoProgramacion\CASTEL_POO_2024\L13784_TP3_v2\L31783_TP3\Servidor\User.cpp(79,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  AdminInterface.cpp
-  Generating Code...
-  Servidor.vcxproj -> C:\Users\Usuario\Desktop\RepoProgramacion\CASTEL_POO_2024\L13784_TP3_v2\L31783_TP3\x64\Debug\Servidor.exe

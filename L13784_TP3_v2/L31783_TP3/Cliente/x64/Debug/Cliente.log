@@ -1,6 +1,0 @@
-﻿  ClientInterface.cpp
-  main_client.cpp
-  RequestHandler.cpp
-C:\Users\Usuario\Desktop\RepoProgramacion\CASTEL_POO_2024\L13784_TP3_v2\L31783_TP3\Cliente\RequestHandler.cpp(13,38): warning C4101: 'e': unreferenced local variable
-  Generating Code...
-  Cliente.vcxproj -> C:\Users\Usuario\Desktop\RepoProgramacion\CASTEL_POO_2024\L13784_TP3_v2\L31783_TP3\x64\Debug\Cliente.exe
