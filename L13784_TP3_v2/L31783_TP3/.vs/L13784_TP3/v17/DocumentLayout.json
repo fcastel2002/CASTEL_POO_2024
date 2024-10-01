@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Pachi\\Desktop\\repos\\CASTEL_POO_2024\\L13784_TP3_v2\\L31783_TP3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B597DDBC-9293-463F-A233-E7E0EEFAF205}|Cliente\\Cliente.vcxproj|C:\\Users\\Pachi\\Desktop\\repos\\CASTEL_POO_2024\\L13784_TP3_v2\\L31783_TP3\\Cliente\\RequestHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B597DDBC-9293-463F-A233-E7E0EEFAF205}|Cliente\\Cliente.vcxproj|solutionrelative:Cliente\\RequestHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RequestHandler.cpp",
+              "DocumentMoniker": "C:\\Users\\Pachi\\Desktop\\repos\\CASTEL_POO_2024\\L13784_TP3_v2\\L31783_TP3\\Cliente\\RequestHandler.cpp",
+              "RelativeDocumentMoniker": "Cliente\\RequestHandler.cpp",
+              "ToolTip": "C:\\Users\\Pachi\\Desktop\\repos\\CASTEL_POO_2024\\L13784_TP3_v2\\L31783_TP3\\Cliente\\RequestHandler.cpp",
+              "RelativeToolTip": "Cliente\\RequestHandler.cpp",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-27T20:55:40.855Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
